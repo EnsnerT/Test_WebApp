@@ -2,6 +2,7 @@ var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     '/Test_WebApp/',
     '/Test_WebApp/preview.png',
+    '/Test_WebApp/preview_512.png',
     '/Test_WebApp/manifest.json',
     '/Test_WebApp/sw.js',
     '/Test_WebApp/styles.css',
