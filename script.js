@@ -1,4 +1,4 @@
-document.onreadystatechange(function(e){
+document.body.onload(function(e){
     // Loaded Site
     console.log(e);
 });
