@@ -10,6 +10,11 @@
         "src": "/Test_WebApp/preview.png",
         "type": "image/png",
         "sizes": "256x256"
+      },
+      {
+        "src": "/Test_WebApp/preview_512.png",
+        "type": "image/png",
+        "sizes": "512x512"
       }
     ],
     "display":"standalone"
