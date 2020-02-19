@@ -3,11 +3,11 @@
     "short_name":"test1",
     "background_color":"#e8001a",
     "theme_color":"#e8001a",
-    "start_url":"/",
+    "start_url":"/Test_WebApp/",
     "scope":"/Test_WebApp/",
     "icons": [
       {
-        "src": "preview.png",
+        "src": "/Test_WebApp/preview.png",
         "type": "image/png",
         "sizes": "256x256"
       }
