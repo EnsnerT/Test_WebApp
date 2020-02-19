@@ -1,0 +1,8 @@
+{
+    "name":"Test_app",
+    "short_name":"test1",
+    "background_color":"#e8001a",
+    "theme_color":"#e8001a",
+    "start_url":"/",
+    "display":"standalone"
+}
