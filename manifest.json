@@ -3,7 +3,8 @@
     "short_name":"test1",
     "background_color":"#e8001a",
     "theme_color":"#e8001a",
-    "start_url":"/Test_WebApp/",
+    "start_url":"/",
+    "scope":"/Test_WebApp/",
     "icons": [
       {
         "src": "preview.png",
