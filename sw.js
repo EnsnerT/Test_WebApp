@@ -47,7 +47,7 @@ function respondOffline(event){
                     return "<html><body>ERROR</body></html>";
                 }
             }
-        ).error(
+        ).catch(
             function(error){
                 console.error("Recieved an Error! ",error)
             }
