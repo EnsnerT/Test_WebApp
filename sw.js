@@ -32,7 +32,7 @@ self.addEventListener('fetch', function (event) {
         );
     } else {
         event.respondWith(
-            caches.match("/offline.html")
+            caches.match("/Test_WebApp/offline.html")
                 .then(function (response) {
                     // Cache hit - return response
                     if (response) {
