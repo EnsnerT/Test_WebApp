@@ -1,12 +1,16 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'my-site-offline';
 var urlsToCache = [
-    '/Test_WebApp/',
-    //'/Test_WebApp/preview.png',
+    // '/Test_WebApp/',
+    // '/Test_WebApp/preview.png',
+    // '/Test_WebApp/script.js',
+    // OFFLINE USE
+    '/Test_WebApp/offline.svg',
+    '/Test_WebApp/offline.html',
+    // App Icon
     '/Test_WebApp/preview_512.png',
     '/Test_WebApp/manifest.json',
     '/Test_WebApp/sw.js',
-    '/Test_WebApp/styles.css',
-    '/Test_WebApp/script.js'
+    '/Test_WebApp/styles.css'
 ];
 
 self.addEventListener('install', function (event) {
@@ -21,15 +25,27 @@ self.addEventListener('install', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-    event.respondWith(
-        caches.match(event.request)
-            .then(function (response) {
-                // Cache hit - return response
-                if (response) {
-                    return response;
+    if(navigator.onLine){
+        // Load Normal
+        event.respondWith(
+            fetch(event.request)
+        );
+    } else {
+        event.respondWith(
+            caches.match("/offline.html")
+                .then(function (response) {
+                    // Cache hit - return response
+                    if (response) {
+                        return response;
+                    } else {
+                        return "<html><body>ERROR</body></html>";
+                    }
                 }
-                return fetch(event.request);
-            }
+            ).error(
+                function(error){
+                    console.error("Recieved an Error! ",error)
+                }
             )
-    );
+        );
+    }
 });

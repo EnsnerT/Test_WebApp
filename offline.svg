@@ -1,0 +1,15 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <title>Offline</title>
+        <!-- <rect id="solo" height="100" width="100" fill="#f00" /> -->
+        <path id="svg_1" d="M15,5L95,85L85,95L5,15,z" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#fff" fill="#000"/>
+        <path id="svg_2" d="M5,95v-22.5h15v22.5z" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#fff" fill="#000"/>
+        <path id="svg_3" d="M30,95v-45h8l6,6v39z" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#fff" fill="#000"/>
+        <path id="svg_4" d="M55,95v-28l15,15v13z" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#fff" fill="#000"/>
+        <path id="svg_5" d="M55,27.5v15.5l15,15v-30.5z" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#fff" fill="#000"/>
+
+        <path id="svg_6" d="M80,95v-3l3,3z" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#fff" fill="#000"/>
+        <path id="svg_7" d="M80,5v63l15,15v-78z" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#fff" fill="#000"/>
+        <path id="svg_8" d="M87,95l8,-8v8z" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#fff" fill="#000"/>
+    </g>
+</svg>
