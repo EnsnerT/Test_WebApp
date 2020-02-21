@@ -28,25 +28,29 @@ self.addEventListener('fetch', function (event) {
     if(navigator.onLine){
         // Load Normal
         event.respondWith(
-            fetch(event.request)
+            fetch(event.request).catch(function(){navigator.onLine=false;respondOffline(event)})
         );
     } else {
-        event.respondWith(
-            caches.match((event.request.endsWith("/")?"/Test_WebApp/offline.html":event.request))
-                .then(function (response) {
-                    // Cache hit - return response
-                    if (response) {
-                        return response;
-                    } else {
-                        console.log("Kein Fund Für ",event.request)
-                        return "<html><body>ERROR</body></html>";
-                    }
-                }
-            ).error(
-                function(error){
-                    console.error("Recieved an Error! ",error)
-                }
-            )
-        );
+        respondOffline(event);
     }
 });
+
+function respondOffline(event){
+    event.respondWith(
+        caches.match((event.request.endsWith("/")?"/Test_WebApp/offline.html":event.request))
+            .then(function (response) {
+                // Cache hit - return response
+                if (response) {
+                    return response;
+                } else {
+                    console.log("Kein Fund Für ",event.request)
+                    return "<html><body>ERROR</body></html>";
+                }
+            }
+        ).error(
+            function(error){
+                console.error("Recieved an Error! ",error)
+            }
+        )
+    );
+}
