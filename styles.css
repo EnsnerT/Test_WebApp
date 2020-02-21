@@ -2,3 +2,42 @@ body {
     margin: 0px;
     background: #fff;
 }
+
+.offline img {
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+.offline {
+    padding: 10px;
+    width: 500px;
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 161px);
+    height: 300px;
+    left: calc(50% - 261px);
+    background: #d5d5d5;
+    border-radius: 30px;
+    box-shadow: #000 9px 9px 29px -14px;
+}
+
+.offline span {
+    /* position: relative; */
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+@media (max-width: 576px){
+    .offline {
+        width: 100%;
+        left: 0px;
+        border-radius: 0px;
+        padding: 10px 0px;
+        box-shadow: #000 9px 9px 29px -14px;
+        
+    }
+}
